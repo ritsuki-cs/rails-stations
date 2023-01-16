@@ -1,0 +1,42 @@
+<header class="admin-header">
+  <h1>管理画面</h1>
+</header>
+<main class="admin-main">
+  <nav>
+    <ul>
+      <li>menu</li>
+      <li class="selected">映画一覧</li>
+    </ul>
+  </nav>
+  <article>
+    <h2>映画一覧</h2>
+    <table class="movies-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>映画タイトル</th>
+          <th>公開年</th>
+          <th>上映中か</th>
+          <th>概要</th>
+          <th>画像URL</th>
+          <th>作成日時</th>
+          <th>更新日時</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @movies.each do |movie| %>
+        <tr>
+          <td><div><%= movie.id %></div></td>
+          <td><div><%= movie.name %></div></td>
+          <td><div><%= movie.year %></div></td>
+          <td><div><%= movie.is_showing ? "上映中" : "上映予定" %></div></td>
+          <td><div><%= movie.description %></div></td>
+          <td><div><a href="<%= movie.image_url %>">画像</a></div></td>
+          <td><div><%= movie.created_at %></div></td>
+          <td><div><%= movie.updated_at %></div></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

@@ -1,0 +1,13 @@
+<main class="movies-list">
+  <h1>映画一覧</h1>
+  <div class="movies-table">
+    <% @movies.each do |movie| %>
+      <div class="movie-content">
+        <img src="<%= movie.image_url %>" width="100%" height="150px" />
+        <h2><%= movie.name %></h2>
+        <p><%= movie.year %>年公開</p>
+        <p><%= movie.description %></p>
+      </div>
+    <% end %>
+  </div>
+</main>

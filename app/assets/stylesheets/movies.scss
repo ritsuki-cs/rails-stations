@@ -1,0 +1,26 @@
+// Place all the styles related to the movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.movies-list {
+  padding: 40px;
+  .movies-table {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    .movie-content {
+      margin: 20px;
+      padding-bottom: 10px;
+      width: calc(25% - 40px);
+      box-shadow: 5px 5px 10px #cccccc;
+      h2 {
+        margin: 0 10px;
+        font-size: 20px;
+      }
+      p {
+        margin: 0 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
