@@ -1,13 +1,6 @@
-<header class="admin-header">
-  <h1>管理画面</h1>
-</header>
+<%= render '/admin/header' %>
 <main class="admin-main">
-  <nav>
-    <ul>
-      <li>menu</li>
-      <li class="selected">映画一覧</li>
-    </ul>
-  </nav>
+  <%= render '/admin/sidebar' %>
   <article>
     <h2>映画一覧</h2>
     <table class="movies-table">

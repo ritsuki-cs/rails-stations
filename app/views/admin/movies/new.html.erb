@@ -1,0 +1,20 @@
+<%= render '/admin/header' %>
+<main class="admin-main">
+  <%= render '/admin/sidebar' %>
+  <article>
+    <h2>映画登録</h2>
+    <%= form_with do |form| %>
+      <%= form.label :name, "映画タイトル" %>
+      <%= form.text_field :name %>
+      <%= form.label :year, "公開年" %>
+      <%= form.text_field :year %>
+      <%= form.label :is_showing, "上映中か" %>
+      <%= form.check_box :is_showing %>
+      <%= form.label :description, "概要" %>
+      <%= form.text_field :description %>
+      <%= form.label :image_url, "画像URL" %>
+      <%= form.text_field :image_url %>
+      <%= form.submit "Save" %>
+    <% end %>
+  </article>
+</main>
