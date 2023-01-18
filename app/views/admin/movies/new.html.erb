@@ -5,11 +5,11 @@
     <h2>映画登録</h2>
     <%= form_with do |form| %>
       <div class="form-input">
-        <%= form.label :name, "映画タイトル" %>
+        <%= form.label :name, "タイトル" %>
         <%= form.text_field :name %>
         <%= form.label :year, "公開年" %>
         <%= form.text_field :year %>
-        <%= form.label :is_showing, "上映中か" %>
+        <%= form.label :is_showing, "上映中" %>
         <%= form.check_box :is_showing, { class: "is-showing" } %>
         <%= form.label :description, "概要" %>
         <%= form.text_field :description %>
