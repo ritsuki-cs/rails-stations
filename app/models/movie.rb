@@ -3,5 +3,5 @@ class Movie < ApplicationRecord
   validates :year, length: { maximum: 45 }
   validates :image_url, length: { maximum: 150 }
   validates :is_showing, inclusion: {in: [true, false]}
-  validates :description, format: { with: /\A.*+\z/, multiline: true }
+  # validates :description, format: { with: /\A.(*\R*)\z/, multiline: true }
 end
