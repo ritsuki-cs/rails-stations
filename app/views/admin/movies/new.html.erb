@@ -3,7 +3,7 @@
   <%= render '/admin/sidebar' %>
   <article>
     <h2>映画登録</h2>
-    <%= form_with do |form| %>
+    <%= form_with model: [:admin, @movie] do |form| %>
       <div class="form-input">
         <%= form.label :name, "タイトル" %>
         <%= form.text_field :name %>

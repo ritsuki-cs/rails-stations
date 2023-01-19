@@ -86,12 +86,16 @@
           margin-bottom: 10px;
         }
         input, textarea {
-          width: calc(90% - 50px);
+          width: calc(90% - 70px);
           margin-bottom: 10px;
+          padding: 0 10px;
           &.is-showing {
             width: 50px;
             margin-right: calc(90% - 96px);
           }
+        }
+        textarea {
+          padding-top: 5px;
         }
       }
       .form-btns {

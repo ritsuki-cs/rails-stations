@@ -8,11 +8,22 @@ class Admin::MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(params[:movie])
+    @movie = Movie.new(movie_params)
     if @movie.save
-      redirect_to @movie
+      redirect_to admin_movies_path
     else
-      render "new"
+      render new_admin_movie_path
     end
+  end
+
+  private
+  def movie_params
+    params.require(:movie).permit(
+                            :name,
+                            :year,
+                            :is_showing,
+                            :description,
+                            :image_url
+                          )
   end
 end
