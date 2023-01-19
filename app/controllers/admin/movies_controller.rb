@@ -12,6 +12,7 @@ class Admin::MoviesController < ApplicationController
     if @movie.save
       redirect_to admin_movies_path
     else
+      flash.now[:alert] = "登録に失敗しました。"
       render new_admin_movie_path
     end
   end
