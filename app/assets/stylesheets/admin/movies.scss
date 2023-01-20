@@ -114,7 +114,7 @@
         flex: 1;
         text-align: right;
         padding: 15px;
-        .close-btn {
+        .close-btn, .delete-btn {
           // 形・大きさ
           vertical-align: top;
           display: inline-block;
@@ -132,7 +132,10 @@
             color: white;
           }
         }
-        .save-btn {
+        .delete-btn {
+          background-color: red;
+        }
+        .save-btn, .save-change-btn {
           // 形・大きさ
           vertical-align: top;
           width: 80px;
@@ -145,16 +148,7 @@
           font-size: 17px;
         }
         .save-change-btn {
-          // 形・大きさ
-          vertical-align: top;
           width: 130px;
-          height: 30px;
-          border: 1px solid;
-          border-radius: 4px;
-          // 色・文字
-          background-color: #007bff;
-          color: white;
-          font-size: 17px;
         }
       }
     }
