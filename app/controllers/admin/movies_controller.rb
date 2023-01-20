@@ -34,6 +34,7 @@ class Admin::MoviesController < ApplicationController
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
+    flash[:success] = "削除が完了しました。"
     redirect_to admin_movies_path
   end
 

@@ -3,6 +3,13 @@
   <%= render '/admin/sidebar' %>
   <article>
     <h2>映画一覧</h2>
+    <% if flash[:success] %>
+      <div class="message-success">
+        <% flash.each do |message_type, message| %>
+          <p><%= message %></p>
+        <% end %>
+      </div>
+    <% end %>
     <table class="movies-table">
       <thead>
         <tr>
