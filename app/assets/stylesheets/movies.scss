@@ -4,6 +4,43 @@
 
 .movies-list {
   padding: 40px;
+  form {
+    display: flex;
+    flex-direction: column;
+    .search {
+      text-align: center;
+      margin-bottom: 50px;
+      height: 30px;
+      .search-btn {
+        font-family: FontAwesome;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5em;
+        line-height: 40px;
+      }
+      .text-field {
+        background-color: gainsboro;
+        border: none;
+        width: 40%;
+        border-radius: 5px;
+        padding: 10px;
+        vertical-align: bottom;
+      }
+    }
+    .radio-btns {
+      display: flex;
+      width: 85%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      input {
+        margin-right: 5px;
+        width: 13px;
+      }
+      label {
+        width: calc(100% - 18px);
+      }
+    }
+  }
   .movies-table {
     display: flex;
     flex-wrap: wrap;

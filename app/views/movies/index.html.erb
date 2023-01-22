@@ -1,14 +1,18 @@
 <main class="movies-list">
   <h1>映画一覧</h1>
   <%= form_with method: :get do |form| %>
-    <%= form.submit "Search" %>
-    <%= form.text_field :keyword, value: params[:keyword] %>
-    <%= form.radio_button :is_showing, "", checked: @isCheckedAll %>
-    <%= form.label :is_showing_, "全て" %>
-    <%= form.radio_button :is_showing, "1", checked: @isChecked1 %>
-    <%= form.label :is_showing_1, "公開中" %>
-    <%= form.radio_button :is_showing, "0", checked: @isChecked0 %>
-    <%= form.label :is_showing_0, "公開予定" %>
+    <div class="search">
+      <%= form.submit "\uF002", class: "search-btn" %>
+      <%= form.text_field :keyword, placeholder: "キーワードで検索する", value: params[:keyword], class: "text-field" %>
+    </div>
+    <div class="radio-btns">
+      <%= form.radio_button :is_showing, "", checked: @isCheckedAll %>
+      <%= form.label :is_showing_, "全て" %>
+      <%= form.radio_button :is_showing, "1", checked: @isChecked1 %>
+      <%= form.label :is_showing_1, "公開中" %>
+      <%= form.radio_button :is_showing, "0", checked: @isChecked0 %>
+      <%= form.label :is_showing_0, "公開予定" %>
+    </div>
   <% end %>
   <div class="movies-table">
     <% @movies.each do |movie| %>
