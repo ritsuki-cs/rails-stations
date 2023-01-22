@@ -1,0 +1,26 @@
+<main class="sheets-list">
+  <h1>座席一覧</h1>
+  <div class="screen">スクリーン1</div>
+  <table class="sheets-table">
+    <thead>
+      <tr>
+        <th></th>
+        <% @columns.each do |c| %>
+          <th><%= c.column %></th>
+        <% end %>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @rows.each do |r| %>
+        <tr>
+          <td><%= r.row.upcase %></td>
+          <% @columns.each do |c| %>
+            <td class="sheet"></td>
+          <% end %>
+          <td><%= r.row.upcase %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</main>
